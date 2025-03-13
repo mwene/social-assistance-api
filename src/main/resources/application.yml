@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: social-assistance-api
+
+  profiles:
+    active: postgres
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/social_mis_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  sql:
+    init:
+      mode: never
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: on_param
+    whitelabel:
+      enable: false
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    
+logging:
+  level:
+    root: INFO
+    com.social.assistance: DEBUG
+    org.springframework: INFO
+    org.hibernate: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/social-assistance-api.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 7
+
+jwt:
+  secret: your-very-secure-secret-key-here
+  expiration: 86400000

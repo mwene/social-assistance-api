@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.social.assistance.service.UserServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-03-13T15:35:19" hostname="muene" time="1.466">
+  <properties/>
+  <testcase name="changePassword_userNotFound_throwsException()" classname="com.social.assistance.service.UserServiceTest" time="1.365"/>
+  <testcase name="registerUser_invalidRole_throwsException()" classname="com.social.assistance.service.UserServiceTest" time="0.021"/>
+  <testcase name="registerUser_success()" classname="com.social.assistance.service.UserServiceTest" time="0.02"/>
+  <testcase name="changePassword_invalidOldPassword_throwsException()" classname="com.social.assistance.service.UserServiceTest" time="0.015"/>
+  <testcase name="registerUser_duplicateUsername_throwsException()" classname="com.social.assistance.service.UserServiceTest" time="0.008"/>
+  <testcase name="changePassword_success()" classname="com.social.assistance.service.UserServiceTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
