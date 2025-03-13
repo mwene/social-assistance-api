@@ -1,0 +1,59 @@
+Design Enhancements
+Color Scheme:
+Used a vibrant blue gradient (#0288d1 to #4fc3f7) for the app bar, buttons, and active tabs, paired with a subtle cyan background (#e0f7fa to #b2ebf2) for a fresh, modern feel.
+
+Typography:
+Bold, clean fonts with custom spacing for titles (text-h5 font-weight-bold).
+Consistent use of Roboto (Vuetify default) for a professional look.
+
+Cards:
+Rounded corners (rounded-xl), subtle elevation (elevation-6), and a light grey background (grey lighten-4) for depth.
+Hover effect lifts cards slightly (translateY(-4px)).
+
+Buttons:
+Gradient backgrounds, rounded edges, and hover animations (lift and shadow) for interactivity.
+Icons (mdi-*) enhance visual cues.
+
+Forms:
+Outlined, rounded, dense inputs with prepend icons for a sleek, minimal design.
+Two-column layout in the applicant form for better organization and readability.
+
+Tabs:
+Centered, grow-style tabs with gradient backgrounds on active states.
+Smooth transitions for a polished effect.
+
+Layout:
+Generous padding (pa-6, py-8) and spacing for a clean, uncluttered look.
+Centered login card with a prominent shadow for focus.
+
+Animations:
+Subtle transitions on buttons, cards, and tabs for a dynamic feel without overwhelming the user.
+
+
+Setup Instructions
+Ensure Vuetify and Material Design Icons are included:
+// main.js
+import Vue from 'vue';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
+import '@mdi/font/css/materialdesignicons.css';
+
+Vue.use(Vuetify);
+
+new Vue({
+  vuetify: new Vuetify({
+    theme: {
+      themes: {
+        light: {
+          primary: '#0288d1',
+          secondary: '#4fc3f7',
+          accent: '#b2ebf2'
+        }
+      }
+    }
+  }),
+  render: h => h(App)
+}).$mount('#app');
+
+Install dependencies:
+npm install axios vuetify @mdi/font
